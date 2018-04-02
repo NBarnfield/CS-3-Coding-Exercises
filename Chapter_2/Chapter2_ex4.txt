@@ -4,10 +4,12 @@ height = 12.0
 
 # Questions
 
-1. width//2 = 17
+# This is referred to as floor division an will return a truncated integer.
+1. width//2 = 8
 
 2. width/2.0 = 8.5
 
-3. height/3 = 4
+# As height is a float variable the corresponding output will also be a float.
+3. height/3 = 4.0
 
 4. 1 + 2 * 5 = 11
