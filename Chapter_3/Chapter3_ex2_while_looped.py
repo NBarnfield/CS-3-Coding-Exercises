@@ -1,14 +1,17 @@
-try:
-    hours = float(input("How many hours did you work? "))
-except:
-    print("Error: That is not a numeric value.")
-    exit()
+hours = 0
+rate = 0
 
-try:
-    rate = float(input("What is your hourly rate? "))
-except:
-    print("Error: That is not a numeric value.")
-    exit()
+while hours == 0:
+    try:
+        hours = float(input("How many hours did you work? "))
+    except:
+        print("Error: That is not a numeric value.")
+
+while rate == 0:
+    try:
+        rate = float(input("What is your hourly rate? "))
+    except:
+        print("Error: That is not a numeric value.")
 
 if hours > 40:
     pay = 40 * rate
