@@ -7,16 +7,58 @@
 # parrot_trouble(talking, hour)
 
 def parrot_trouble(talking, hour):
-    pass
-    if talking == True:
+    #TODO: nested if statements for the hours? Seperate if statements?
+    if talking == True and hour > 7 or hour < 20:
         print("We could be in for some drama!")
-    else:
+    elif talking == False and hour < 7 or hour > 20:
         print("Quiet....perfect.")
-    if hour > 7 or < 20:
-        print("We are in trouble!")
-    else:
-        print("Thank goodness, a reasonable hour.")
+
+def current_hour(hour):
+    "Set loop to request user input for the current hour. If the response is not within the 24 hour range then loop."
+    hour_counter = 0
+    while hour_counter == 0:
+        time = float(input("What is the hour in 24 hour time (0-23)? "))
+        if hour in range(0, 23):
+            return time
+        else:
+            print("That is not a valid response")
 
 
-hour = int(input("What is the hour? "))
-talking = input("Is the parrot talking (y/n)? ")
+def parrot_talking(talking):
+    "Request user input to determine if the parrot is speaking or not. Return a True or False response."
+    talking_counter = 0
+    while talking_counter == 0:
+        is_talking = input("Is the parrot talking (y/n)? ")
+        if is_talking == 'y':
+            talking = True
+            return talking
+        elif is_talking == 'n':
+            talking = False
+            return talking
+        else:
+            print("That is not a valid response, please enter y or n.")
+
+# Set variables
+hour = 0
+talking = 0
+
+# Ask user for the current hour
+try:
+    current_hour(hour)
+except:
+    print("There appears to be an error with the current_hour function.")
+    exit()
+
+# Ask user if the parrot is talking
+try:
+    parrot_talking(talking)
+except:
+    print("There appears to be an error with the parrot_talking function.")
+    exit()
+
+# Compute the result of our scenario
+try:
+    parrot_trouble(talking, hour)
+except:
+    print("There appears to be an error with the parrot_trouble function.")
+    exit()
