@@ -8,21 +8,22 @@
 
 def parrot_trouble(talking, hour):
     #TODO: nested if statements for the hours? Seperate if statements?
-    if talking == True and hour > 7 or hour < 20:
+    if talking == True and hour < 7 or hour > 20:
         print("We could be in for some drama!")
-    elif talking == False and hour < 7 or hour > 20:
-        print("Quiet....perfect.")
+    #elif talking == False and hour < 7 or hour > 20:
+    #    print("Quiet....perfect.")
+    else:
+        print("Quiet...perfect.")
 
-def current_hour(hour):
+def current_hour():
     "Set loop to request user input for the current hour. If the response is not within the 24 hour range then loop."
     hour_counter = 0
     while hour_counter == 0:
-        time = float(input("What is the hour in 24 hour time (0-23)? "))
-        if hour in range(0, 23):
-            return time
+        hour = float(input("What is the hour in 24 hour time (0-23)? "))
+        if 0 < hour > 23:
+            return hour
         else:
-            print("That is not a valid response")
-
+            print("That is not a valid response. Please enter an integer between 0 - 23.")
 
 def parrot_talking(talking):
     "Request user input to determine if the parrot is speaking or not. Return a True or False response."
@@ -44,6 +45,7 @@ talking = 0
 
 # Ask user for the current hour
 try:
+    hour =
     current_hour(hour)
 except:
     print("There appears to be an error with the current_hour function.")
