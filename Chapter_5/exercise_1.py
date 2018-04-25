@@ -10,14 +10,14 @@ count = 0
 while True:
 
     try:
-        number_to_sum = input("Please enter a numeric value, or the Done to exit: ")
+        user_input = input("Please enter a numeric value, or the Done to exit: ")
 
-        if number_to_sum == 'Done':
+        if user_input == 'Done':
             break
 
         else:
 
-            number = float(number_to_sum)
+            number = float(user_input)
             count = count + 1
             total = total + number
             print("The current count is {}, and the current total is {}".format(count, total))
