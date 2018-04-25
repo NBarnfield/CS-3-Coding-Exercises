@@ -8,7 +8,7 @@ all_numbers = []
 while True:
 
     try:
-        user_input = input("Please enter a numeric value, or enter Done to exit: ")
+        user_input = input("\nPlease enter a numeric value, or enter Done to exit: ")
 
         if user_input == 'Done':
             break
@@ -16,6 +16,7 @@ while True:
         else:
 
             number = float(user_input)
+            all_numbers.append(number)
 
             if min_number is None:
                 min_number = number
