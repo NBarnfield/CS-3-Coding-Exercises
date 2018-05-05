@@ -22,24 +22,12 @@ def monkey_smiling(monkey):
 
 
 def monkey_trouble(monkey_a, monkey_b):
-    """Return a True or False to determine if you need to run or hide."""
+    """Determine if you need to run or hide."""
     try:
         if monkey_a is True and monkey_b is False:
-            return False
-        elif monkey_a is False and monkey_b is True:
-            return False
-        else:
-            return True
-
-    except ValueError:
-        print("I don't know what to make of the situation...better back away slowly...")
-
-
-def in_trouble(outcome):
-    """Based on the results of monkey_trouble() determine the best course of action."""
-    try:
-        if outcome is True:
             print("We are safe! Let's continue on our journey!!")
+        elif monkey_a is False and monkey_b is True:
+            print("Phew! No trouble here, let's continue!")
         else:
             print("We are in for some big trouble...brace yourself!!!!")
 
@@ -47,19 +35,19 @@ def in_trouble(outcome):
         print("I don't know what to make of the situation...better back away slowly...")
 
 
-# Set Variables
+# Set variables
 Monkey_A = None
 Monkey_B = None
-run_or_hide = None
 
-# Prompt the user to provide details
+# Prompt user for details
 print("There are two monkeys standing in front of you...Monkey A and Monkey B...")
 print("You look towards Monkey A...")
 Monkey_A = monkey_smiling(Monkey_A)
 print("You now turn to Monkey_B...")
 Monkey_B = monkey_smiling(Monkey_B)
+
+# Confirm that you received a True/False response from the monkey_smiling() function.
 print("Let's see...Monkey A - {}, and Monkey B - {}...".format(Monkey_A, Monkey_B))
 
-# Calculate the appropriate course of action.
-run_or_hide = monkey_trouble(Monkey_A, Monkey_B)
-in_trouble(run_or_hide)
+# Calculate the best course of action.
+monkey_trouble(Monkey_A, Monkey_B)
