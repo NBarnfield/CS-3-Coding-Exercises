@@ -6,7 +6,7 @@
 
 
 def parrot_talking(talking, hour):
-    if talking is True and hour not in range(7, 20):
+    if talking is True and hour not in range(7, 21):
         return True
     else:
         return False
@@ -16,7 +16,7 @@ def parrot_talking(talking, hour):
 while True:
     try:
         current_time = int(input("What is the current hour (0 - 23)? "))
-        if current_time in range(0, 23):
+        if current_time in range(0, 24):
             break
         else:
             print("That is not a valid answer, please enter an integer or float between 0 - 23.")
