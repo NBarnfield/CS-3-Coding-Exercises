@@ -24,12 +24,10 @@ def monkey_smiling(monkey):
 def monkey_trouble(monkey_a, monkey_b):
     """Return a True or False to determine if you need to run or hide."""
     try:
-        if monkey_a is True and monkey_b is False:
-            return False
-        elif monkey_a is False and monkey_b is True:
-            return False
-        else:
+        if monkey_a == monkey_b:
             return True
+        else:
+            return False
 
     except ValueError:
         print("I don't know what to make of the situation...better back away slowly...")

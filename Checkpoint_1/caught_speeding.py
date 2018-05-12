@@ -65,7 +65,7 @@ while True:
 # Ask user for input to tell us what speed they were doing.
 while True:
     try:
-        current_speed = int(input("What speed do you think you were doing there? "))
+        current_speed = float(input("What speed do you think you were doing there? "))
         if current_speed > 0:
             print("So you were going {}km an hour...".format(current_speed))
             break
