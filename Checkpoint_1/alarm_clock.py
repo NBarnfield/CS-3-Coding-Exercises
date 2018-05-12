@@ -3,7 +3,7 @@
 # ring. Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00". Unless we
 # are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off".
 # Make sure all test cases below will pass.
-# alarm_clock(day, vacation)
+# Define function - alarm_clock(day, vacation)
 
 
 def alarm_clock(tomorrow, on_vacation):
