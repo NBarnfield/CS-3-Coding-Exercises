@@ -11,7 +11,7 @@
 def caught_speeding(speed, is_birthday):
 
     # If it is your birthday then reduce the speed by 5.
-    if is_birthday is True:
+    if is_birthday == 'True':
         speed = speed - 5
         print("Considering it is your birthday, let's say you were doing {}.".format(speed))
     else:
@@ -46,12 +46,10 @@ while True:
     try:
         birthday = input("Is it your birthday today (True/False)? ")
         if birthday == "True":
-            birthday = True
             print("Congratulations! Maybe I didn't see you go so quickly there...")
             break
 
         elif birthday == "False":
-            birthday = False
             print("Well, just another day for you then is it...no special treatment then.")
             break
 
