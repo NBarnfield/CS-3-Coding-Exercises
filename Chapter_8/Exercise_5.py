@@ -6,6 +6,7 @@ try:
     fhand = open(file, 'r')
 except:
     print("File name {} is not valid.".format(file))
+    quit()
 
 # Set a counter to count how many lines started with 'From '.
 counter = 0
