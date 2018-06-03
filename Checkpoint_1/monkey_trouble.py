@@ -1,36 +1,63 @@
-# Problem 4 - PFE Checkpoint 1
+# Program name: monkey_trouble.py
+# We have two monkeys, a and b. Accept the input telling if each is smiling.
+# We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.
+# Make sure all test cases below will pass.
+# monkey_trouble(monkey a is smiling, monkey b is smiling)
 
-# Define a function to ask the user if a monkey is smiling, and loop through until a valid answer is given.
-def monkey_smiling():
-    "This function prompts the user to answer if the monkey is smiling or not and returns a True/False response"
-    monkey_counter = 0
-    while monkey_counter == 0:
-        monkey = input("Is the monkey smiling (y/n)? ")
-        if monkey == 'y':
-            print("The monkey appears to be in a good mood...")
+
+def monkey_smiling(monkey):
+    """Ask the user whether the monkey is smiling or not"""
+    while True:
+        try:
+            smiling = input("Is the monkey smiling (True/False)? ")
+            if smiling == "True":
+                return True
+            elif smiling == "False":
+                return False
+            else:
+                print("That is not a valid response. Please enter True or False.")
+
+        except ValueError:
+            print("That is not a valid response. Please enter True or False.")
+
+
+def monkey_trouble(monkey_a, monkey_b):
+    """Return a True or False to determine if you need to run or hide."""
+    try:
+        if monkey_a == monkey_b:
             return True
-        elif monkey == 'n':
-            print("The monkey is not smiling...this could be bad.")
-            return False
         else:
-            print("That is not a valid option, please try again.")
+            return False
+
+    except ValueError:
+        print("I don't know what to make of the situation...better back away slowly...")
 
 
-# Take two variables and then test them to see what the outcome of the event will be.
-print("There are two monkeys standing in front of you - Monkey A and Monkey B.")
-print("If even one of them shows any sign of unhappiness this mightn't be good.")
-print("You look at Monkey A....")
-monkey_a = monkey_smiling()
-print("You look to Monkey B now...")
-monkey_b = monkey_smiling()
+def in_trouble(outcome):
+    """Based on the results of monkey_trouble() determine the best course of action."""
+    try:
+        if outcome is True:
+            print("We are safe! Let's continue on our journey!!")
+        else:
+            print("We are in for some big trouble...brace yourself!!!!")
+
+    except ValueError:
+        print("I don't know what to make of the situation...better back away slowly...")
 
 
-# Now that the variables have had True/False returned we can guage what is going to happen.
-if monkey_a == True and monkey_b == True:
-    print("Everything is going to be great!!")
-elif monkey_a == True and monkey_b == False:
-    print("Watch out, you might be in for a fight!")
-elif monkey_a == False and monkey_b == True:
-    print("Watch out, it's about to get rough around here!")
-else:
-    print("It's going to be a rough day...")
+# Set Variables
+Monkey_A = None
+Monkey_B = None
+run_or_hide = None
+
+# Prompt the user to provide details
+print("There are two monkeys standing in front of you...Monkey A and Monkey B...")
+print("You look towards Monkey A...")
+Monkey_A = monkey_smiling(Monkey_A)
+print("You now turn to Monkey_B...")
+Monkey_B = monkey_smiling(Monkey_B)
+print("Let's see...Monkey A - {}, and Monkey B - {}...".format(Monkey_A, Monkey_B))
+
+# Calculate the appropriate course of action.
+run_or_hide = monkey_trouble(Monkey_A, Monkey_B)
+in_trouble(run_or_hide)
