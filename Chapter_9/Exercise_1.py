@@ -18,4 +18,14 @@ for line in fhand:
     for word in text_list:
         flat_land_text[word] = flat_land_text.get(word, 0) + 1
 
-print(flat_land_text)
+print("The end result of all value pairs is ", flat_land_text)
+
+# Ask user for input and check to see if it is in the dictionary. Print boolean value.
+while True:
+    try:
+        user_input = input("What word would you like to test to see if it is in the dictionary? Enter DONE! to finish.")
+        if user_input == 'DONE!': break
+        print(user_input in flat_land_text)
+
+    except ValueError:
+        print("That is an invalid entry. Please enter a word or 'DONE!' finish.")
