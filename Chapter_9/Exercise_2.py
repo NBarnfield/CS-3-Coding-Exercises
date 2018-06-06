@@ -16,6 +16,8 @@ for line in fhand:
     if not line.startswith('From '): continue
     line = line.rstrip()
     text_list = line.split()
-    mbox_text[word] = text_list[2] #.get(word, 0) + 1
+    print(text_list)
+    for word in text_list:
+        mbox_text[word] = mbox_text.get(text_list[2], 0) + 1
 
 print(mbox_text)
