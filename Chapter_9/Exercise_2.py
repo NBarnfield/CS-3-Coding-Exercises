@@ -8,15 +8,23 @@ except:
     print("File name {} is not valid.".format(file))
     quit()
 
-# Create a dictionary
+# Construct a dictionary
 mbox_text = dict()
 
-# Strip each of the lines and feed it into the dictionary
-for line in fhand:
-    if not line.startswith('From '): continue
-    line = line.rstrip()
-    text_list = line.split()
-    for word in text_list:
-        mbox_text[word] = mbox_text.get(text_list[2], 0) + 1
+# Calculate the frequency of days the emails were sent
+try:
+    for line in fhand:
+        if not line.startswith('From '): continue
+        line = line.rstrip().split()
+        word = line[2]
+        mbox_text[word] = mbox_text.get(word, 0) + 1
 
-print(mbox_text)
+except ValueError:
+    print("There appears to be an error with {}. Please try again.".format(fhand))
+    quit()
+
+# Print results
+if mbox_text == {}:
+    print("Whoops, no luck! There were no lines that started with 'From '!!")
+else:
+    print(mbox_text)
