@@ -16,7 +16,7 @@ try:
     for line in fhand:
         if not line.startswith('From '): continue
         line = line.rstrip().split()
-        word = line[2]
+        word = line[1]
         mbox_text[word] = mbox_text.get(word, 0) + 1
 
 except ValueError:
