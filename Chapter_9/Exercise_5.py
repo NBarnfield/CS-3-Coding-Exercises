@@ -1,7 +1,3 @@
-# Exercise 5: This program records the domain name (instead of the address) where the message was sent from instead
-# of who the mail came from (i.e., the whole email address). At the end of the program, print out the contents
-# of your dictionary.
-
 # Ask user for file name input.
 file = input("Enter file: ")
 
@@ -39,7 +35,7 @@ for email in mbox_emails:
 
 # Print results
 if mbox_emails == {}:
-    print("Whoops, no luck! There were no lines that started with 'From '!!")
+    print("Whoops, no luck! Try again with another file.")
 else:
     print(mbox_emails)
     print("The most emails were sent from {} with a total of {} emails.".format(sender, largest_email))
