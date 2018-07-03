@@ -31,6 +31,10 @@ for key, value in mbox_emails.items():
 
 t.sort(reverse=True)
 
-# Print results
-for value, key in t[:10]:
+# Print results for the top 10
+# for value, key in t[:10]:
+#     print(key, value)
+
+# Print top email sender
+for value, key in t[:1]:
     print(key, value)
