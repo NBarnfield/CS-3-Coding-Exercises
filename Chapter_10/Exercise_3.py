@@ -25,7 +25,7 @@ try:
                 letters_dictionary[letter] = letters_dictionary.get(letter, 0) + 1
 
 except ValueError:
-    print("There appears to be an error with {}. Please ensure there is a line that begins with 'From '.".format(fhand))
+    print("There appears to be an error with {}.".format(fhand))
     quit()
 
 # Construct a list to sort the dictionary
