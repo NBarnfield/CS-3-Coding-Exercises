@@ -13,7 +13,7 @@ except ValueError:
 # Construct a dictionary
 letters_dictionary = dict()
 
-# Calculate the number of emails that were sent by each email address and add them to the dictionary
+# For each line in the text strip them of digits and punctuation, split them, break into words and calculate letters
 try:
     for line in fhand:
         line = line.translate(line.maketrans('', '', string.punctuation))
