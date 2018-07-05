@@ -42,9 +42,20 @@ current_speed = None
 
 
 # Ask the user if it is their birthday.
+
+def today_birthday(question)
+    while True:
+        try:
+            user_birthday = input(question)
+            user_birthday = user_birthday.lower()
+
+
+
+
+
 while True:
     try:
-        birthday = input("Is it your birthday today (True/False)? ")
+
         if birthday == "True":
             print("Congratulations! Maybe I didn't see you go so quickly there...")
             break
@@ -86,3 +97,6 @@ elif ticket == 1:
 
 else:
     print("I don't know if I should be perturbed or inspired. Here's a massive fine for being a maniac.")
+
+
+birthday = is_birthday("Is it your birthday today (True/False)? ")
