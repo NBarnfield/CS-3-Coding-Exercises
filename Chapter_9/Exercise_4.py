@@ -4,7 +4,7 @@ file = input("Enter file: ")
 # Attempt to open the file, otherwise quit on failure.
 try:
     fhand = open(file, 'r')
-except ValueError:
+except IOError:
     print("File name {} is not valid.".format(file))
     quit()
 
@@ -19,7 +19,7 @@ try:
         email = line[1]
         mbox_emails[email] = mbox_emails.get(email, 0) + 1
 
-except ValueError:
+except:
     print("There appears to be an error with {}. Please try again.".format(fhand))
     quit()
 
