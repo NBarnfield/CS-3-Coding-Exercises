@@ -33,7 +33,8 @@ while cigar_counter == 0:
         print("That's not an integer! No counting half cigars! Try again!")
 
 # Ask user for input to determine whether it is a weekend or not.
-weekend_counter = 0
+def is_weekend():
+    weekend_counter = 0
 while weekend_counter == 0:
     try:
         weekend = input("Is it the weekend (y/n)? ")
