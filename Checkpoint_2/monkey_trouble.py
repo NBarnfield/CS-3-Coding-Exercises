@@ -5,7 +5,7 @@
 # monkey_trouble(monkey a is smiling, monkey b is smiling)
 
 
-def monkey_smiling(monkey):
+def monkey_smiling():
     """Ask the user whether the monkey is smiling or not"""
     while True:
         try:
@@ -16,48 +16,26 @@ def monkey_smiling(monkey):
                 return False
             else:
                 print("That is not a valid response. Please enter True or False.")
-
         except ValueError:
             print("That is not a valid response. Please enter True or False.")
 
 
-def monkey_trouble(monkey_a, monkey_b):
+def monkey_trouble(monkey_one, monkey_two):
     """Return a True or False to determine if you need to run or hide."""
-    try:
-        if monkey_a == monkey_b:
-            return True
-        else:
-            return False
+    if monkey_one == monkey_two:
+        print("We are in for some big trouble...brace yourself!!!!")
+    else:
+        print("We are safe! Let's continue on our journey!!")
 
-    except ValueError:
-        print("I don't know what to make of the situation...better back away slowly...")
-
-
-def in_trouble(outcome):
-    """Based on the results of monkey_trouble() determine the best course of action."""
-    try:
-        if outcome is True:
-            print("We are safe! Let's continue on our journey!!")
-        else:
-            print("We are in for some big trouble...brace yourself!!!!")
-
-    except ValueError:
-        print("I don't know what to make of the situation...better back away slowly...")
-
-
-# Set Variables
-Monkey_A = None
-Monkey_B = None
-run_or_hide = None
 
 # Prompt the user to provide details
 print("There are two monkeys standing in front of you...Monkey A and Monkey B...")
 print("You look towards Monkey A...")
-Monkey_A = monkey_smiling(Monkey_A)
+monkey_a = monkey_smiling()
 print("You now turn to Monkey_B...")
-Monkey_B = monkey_smiling(Monkey_B)
-print("Let's see...Monkey A - {}, and Monkey B - {}...".format(Monkey_A, Monkey_B))
+monkey_b = monkey_smiling()
+print("Let's see...Monkey A - {}, and Monkey B - {}...".format(monkey_a, monkey_b))
 
 # Calculate the appropriate course of action.
-run_or_hide = monkey_trouble(Monkey_A, Monkey_B)
-in_trouble(run_or_hide)
+monkey_trouble(monkey_a, monkey_b)
+
