@@ -4,7 +4,7 @@ file = input("Enter file: ")
 # Attempt to open the file, otherwise quit on failure.
 try:
     fhand = open(file, 'r')
-except:
+except IOError:
     print("File name {} is not valid.".format(file))
     quit()
 
@@ -22,10 +22,6 @@ print("The end result of all value pairs is ", flat_land_text)
 
 # Ask user for input and check to see if it is in the dictionary. Print boolean value.
 while True:
-    try:
-        user_input = input("What word would you like to test to see if it is in the dictionary? Enter DONE! to finish.")
-        if user_input == 'DONE!': break
-        print(user_input in flat_land_text)
-
-    except ValueError:
-        print("That is an invalid entry. Please enter a word or 'DONE!' finish.")
+    user_input = input("What word would you like to test to see if it is in the dictionary? Enter DONE! to finish.")
+    if user_input == 'DONE!': break
+    print(user_input in flat_land_text)
