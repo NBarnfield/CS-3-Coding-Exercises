@@ -5,52 +5,47 @@
 # parrot_trouble(talking, hour)
 
 
+def twenty_four_hour_time():
+    while True:
+        try:
+            time_now = int(input("What is the current hour (0 - 23)? "))
+            if time_now in range(0, 24):
+                return time_now
+            else:
+                print("That is not a valid input, please enter an integer between 0 - 23.")
+
+        except ValueError:
+            print("That is not a valid answer, please enter an integer between 0 -23.")
+
+
+def is_talking():
+    while True:
+        try:
+            talking_now = input("Is the parrot talking (y/n)? ")
+            talking_now = talking_now.lower()
+            if talking_now == "y":
+                return True
+            elif talking_now == "n":
+                return False
+            else:
+                print("That is not a valid answer, please enter the character y or n.")
+        except ValueError:
+            print("That is not a valid answer, please enter the character y or n.")
+
+
 def parrot_talking(talking, hour):
     if talking is True and hour not in range(7, 21):
-        return True
+        print("You better get out of there, it's going to get messy real soon!!")
     else:
-        return False
+        print("Awesome, you can cruise on by!")
 
 
-# Get user input on what the hour is in 24 hour time.
-while True:
-    try:
-        current_time = int(input("What is the current hour (0 - 23)? "))
-        if current_time in range(0, 24):
-            break
-        else:
-            print("That is not a valid answer, please enter an integer or float between 0 - 23.")
-
-    except ValueError:
-        print("That is not a valid answer, please enter an integer or float between 0 - 23.")
-
-
-# Get user input on whether or not the parrot is talking
-while True:
-    try:
-        current_talking = input("Is the parrot talking (Y/N)? ")
-        if current_talking == "Y":
-            current_talking = True
-            break
-
-        elif current_talking == "N":
-            current_talking = False
-            break
-        else:
-            print("That is not a valid answer, please enter the character Y or N.")
-
-    except ValueError:
-        print("That is not a valid answer, please enter the character Y or N.")
-
+# Take user input
+current_time = twenty_four_hour_time()
+current_talking = is_talking()
 
 # Confirm the values that were returned as a result of the user's input
 print("So the time is {}, and the parrot is talking {}...".format(current_time, current_talking))
 
 # Pass those values in as arguments to our user defined function
-trouble = parrot_talking(current_talking, current_time)
-
-# Based on the results of our function determine if we are in trouble!
-if trouble is True:
-    print("You better get out of there, it's going to get messy real soon!!")
-else:
-    print("Awesome, you can cruise on by!")
+parrot_talking(current_talking, current_time)
