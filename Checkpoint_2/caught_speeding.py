@@ -1,39 +1,30 @@
-def today_birthday(question):
+def today_birthday():
     while True:
-        try:
-            user_birthday = input(question)
-            if user_birthday in ("true", "True"):
-                print("Congratulations! Maybe I didn't see you go so quickly there...")
-                return True
+        user_birthday = input("Is it your birthday today (True/False)? ")
+        if user_birthday in ("true", "True"):
+            print("Congratulations! Maybe I didn't see you go so quickly there...")
+            return True
 
-            elif user_birthday in ("false", "False"):
-                print("Well, just another day for you then is it...no special treatment then.")
-                return False
+        elif user_birthday in ("false", "False"):
+            print("Well, just another day for you then is it...no special treatment then.")
+            return False
 
-            else:
-                print("That is not a valid response. Please enter True or False.")
-
-        except ValueError:
-            pass
+        else:
+            print("That is not a valid response. Please enter True or False.")
 
 
-def what_speed(speed_question):
+def what_speed():
     while True:
-        try:
-            speed_confession = float(input(speed_question))
-            if speed_confession > 0:
-                print("So you were going {}km an hour...".format(speed_confession))
-                return speed_confession
+        speed_confession = float(input("What speed do you think you were doing there? "))
+        if speed_confession > 0:
+            print("So you were going {}km an hour...".format(speed_confession))
+            return speed_confession
 
-            else:
-                print("That isn't what I saw. Please repeat how fast you were going as an integer or float, buddy.")
-
-        except ValueError:
-            print("That is not a valid answer. Please enter an integer or float.")
+        else:
+            print("That isn't what I saw. Please repeat how fast you were going as an integer or float, buddy.")
 
 
 def caught_speeding(speed, is_birthday):
-
     # If it is your birthday then reduce the speed by 5.
     if is_birthday is True:
         speed = speed - 5
@@ -71,7 +62,7 @@ def fine(ticket_value):
         print("I don't know if I should be perturbed or inspired. Here's a massive fine for being a maniac.")
 
 
-birthday = today_birthday("Is it your birthday today (True/False)? ")
-current_speed = what_speed("What speed do you think you were doing there? ")
+birthday = today_birthday()
+current_speed = what_speed()
 ticket = caught_speeding(current_speed, birthday)
 fine(ticket)
