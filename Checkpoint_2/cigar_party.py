@@ -23,36 +23,30 @@ def cigar_party(cigars, is_weekend):
 
 print("You are a squirrel. You want to have a party, but do you have the right number of cigars, and is it a weekend?")
 
-# Ask user for input to determine the number of cigars they have.
-cigar_counter = 0
-while cigar_counter == 0:
-    try:
-        number_of_cigars = int(input("\nHow many cigars do you have? "))
-        cigar_counter = 1
-    except ValueError:
-        print("That's not an integer! No counting half cigars! Try again!")
 
-# Ask user for input to determine whether it is a weekend or not.
-def is_weekend():
-    weekend_counter = 0
-while weekend_counter == 0:
-    try:
-        weekend = input("Is it the weekend (y/n)? ")
-        if weekend == 'y':
-            weekend = True
-            weekend_counter = 1
+def cigar_count():
+    while True:
+        try:
+            how_many_cigars = int(input("\nHow many cigars do you have? "))
+            return how_many_cigars
+        except ValueError:
+            print("That's not an integer! No counting half cigars! Try again!")
 
-        elif weekend == 'n':
-            weekend = False
-            weekend_counter = 1
 
+def may_be_weekend():
+    while True:
+        end_of_week = input("Is it the weekend (y/n)? ")
+        if end_of_week == 'y':
+            return True
+        elif end_of_week == 'n':
+            return False
         else:
             print("That is not a valid response. Please enter y or n.")
 
-    except ValueError:
-        print("Please enter a character.")
 
 # Compute whether you can have a party or not.
+number_of_cigars = cigar_count()
+weekend = may_be_weekend()
 cigar_party(number_of_cigars, weekend)
 
 
