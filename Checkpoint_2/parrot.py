@@ -14,7 +14,7 @@ def twenty_four_hour_time():
             else:
                 print("That is not a valid input, please enter an integer between 0 - 23.")
 
-        except ValueError:
+        except:
             print("That is not a valid answer, please enter an integer between 0 -23.")
 
 
@@ -29,7 +29,7 @@ def is_talking():
                 return False
             else:
                 print("That is not a valid answer, please enter the character y or n.")
-        except ValueError:
+        except:
             print("That is not a valid answer, please enter the character y or n.")
 
 

@@ -17,6 +17,7 @@ def sum_double(x, y):
         # If requiring a return value.
         #return added
 
+
 # Using the function, compute the following.
 print("Let's do some maths!")
 sum_double(1, 2)
