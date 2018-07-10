@@ -1,7 +1,3 @@
-# Define a function that will take 2 parameters - weekday and vacation.
-# This will take a true or false response from the user and then compute if they can sleep in or not.
-
-
 def sleep_in(weekday, vacation):
     if weekday == 'True':
         if vacation == 'True':
@@ -15,22 +11,24 @@ def sleep_in(weekday, vacation):
             print("YAY it's the weekend - you can sleep in!")
 
 
-# Set a while loop that will continue to ask the user for input until it is valid.
 def what_day():
     while True:
-        day = input("Is it a weekday today (True/False)? ")
-        if day not in ("True", "False"):
-            print("That is not a valid response. Please enter True or False.")
+        current_day = input("Is it a weekday today (True/False)? ")
+        if current_day in ("True", "False"):
+            return current_day
         else:
-            break
+            print("That is not a valid response. Please enter True or False.")
 
-# Set a second while loop to check for our second criteria.
-while True:
-    holiday = input("Are you on vacation (True/False)? ")
-    if holiday not in ("True", "False"):
-        print("That is not a valid response. Please enter True or False.")
-    else:
-        break
 
-# Place the two variables into the sleep_in function to determine if you can sleep in or not.
+def is_holiday():
+    while True:
+        on_holiday = input("Are you on vacation (True/False)? ")
+        if on_holiday in ("True", "False"):
+            return on_holiday
+        else:
+            print("That is not a valid response. Please enter True or False.")
+
+
+day = what_day()
+holiday = is_holiday()
 sleep_in(day, holiday)
