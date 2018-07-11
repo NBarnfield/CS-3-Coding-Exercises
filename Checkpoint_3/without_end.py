@@ -1,4 +1,4 @@
-def ask_for_string():
+def without_end():
     while True:
         user_input = input("Please enter an awesome alphabetic string with at least 2 characters: ")
         if len(user_input) > 2 and isinstance(user_input, str):
@@ -9,6 +9,6 @@ def ask_for_string():
 
 
 # Store multiple return values into variables and print
-string, altered_string = ask_for_string()
+string, altered_string = without_end()
 print("This is the string you wrote {} and the middle of the word is {}".format(string, altered_string))
 
