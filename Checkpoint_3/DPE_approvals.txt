@@ -1,0 +1,42 @@
+LGA Name|District|Approvals_2016|Approvals_2015|Approvals_2013|Completions_2016|Completions_2015|Completions_2013
+Ashfield|Central|62|550|141|159|47|5
+Auburn|West Central|2613|2544|1686|872|1283|437
+Bankstown|West Central|1842|2259|1134|876|716|522
+Blacktown|West Central|4758|3634|2115|2498|2336|1856
+Blue Mountains|West|280|278|187|127|135|97
+Botany Bay|Central|1148|2160|653|936|733|378
+Burwood|Central|671|338|477|578|70|504
+Camden|South West|2638|2324|1322|2004|1839|1191
+Campbelltown|South West|1605|1579|1122|914|1097|505
+Canada Bay|Central|302|877|517|452|354|1381
+Canterbury|South|1429|1932|939|826|975|420
+Fairfield|South West|1083|1042|663|318|313|367
+Hawkesbury|West|241|244|168|171|145|48
+Holroyd|West Central|2000|1328|564|685|341|525
+Hornsby|North|2467|2408|748|1606|643|176
+Hunters Hill|North|43|31|70|45|4|84
+Hurstville|South|603|976|523|849|252|321
+Kogarah|South|728|139|307|134|241|84
+Ku-ring-gai|North|1164|844|787|547|471|747
+Lane Cove|North|1114|707|274|617|437|183
+Leichhardt|Central|572|203|254|103|269|45
+Liverpool|South West|3271|2512|1701|1497|1883|1160
+Manly|North|121|48|29|25|47|64
+Marrickville|Central|699|911|221|540|319|404
+Mosman|North|46|192|42|56|38|30
+North Sydney|North|829|525|822|839|312|306
+Parramatta|West Central|3022|3046|2600|2378|1644|1548
+Penrith|West|2247|2114|1474|1383|1365|1189
+Pittwater|North|169|166|329|50|196|217
+Randwick|Central|351|617|645|462|189|285
+Rockdale|South|1672|1449|1522|1469|1419|417
+Ryde|North|3065|2230|1139|701|1817|508
+Strathfield|Central|612|884|301|986|312|380
+Sutherland|South|1986|844|631|220|319|330
+Sydney|Central|5634|4840|3888|2514|3701|2077
+The Hills|West Central|3110|2996|1879|1896|1058|1112
+Warringah|North|693|750|352|207|265|288
+Waverley|Central|231|453|82|538|102|173
+Willoughby|North|549|327|609|153|256|142
+Wollondilly|South West|445|549|234|339|441|212
+Woollahra|Central|301|181|146|12|32|31
