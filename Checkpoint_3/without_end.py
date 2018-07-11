@@ -10,3 +10,4 @@ def ask_for_string():
 string = ask_for_string()
 new_string = string[1:-1]
 print("This is the string you wrote {} and the middle of the word is {}".format(string, new_string))
+
