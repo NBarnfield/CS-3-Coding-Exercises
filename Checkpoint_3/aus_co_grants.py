@@ -20,6 +20,7 @@ for line in reader:
     if line[9] == 'AUSTRALIA' : continue
     grant_state_dict = dict()
     for state in line:
-        grant_state_dict[State] = grant_state_dict.get(state, 0) + 1
+        state_of_grant = line[8]
+        grant_state_dict['State'] = grant_state_dict.get(state_of_grant, 0) + 1
 
 print(grant_state_dict)
