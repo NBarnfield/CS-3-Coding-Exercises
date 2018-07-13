@@ -21,3 +21,5 @@ for line in reader:
     grant_state_dict = dict()
     for state in line:
         grant_state_dict[State] = grant_state_dict.get(state, 0) + 1
+
+print(grant_state_dict)
