@@ -14,6 +14,7 @@ def open_file():
 
 # Open and read file
 ifile = open_file()
+
 reader = csv.reader(ifile)
 
 # Create a dictionary to store results
