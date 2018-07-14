@@ -24,9 +24,10 @@ grant_state_dict = dict()
 for line in reader:
     # List comprehension is awesome!
     line = [x.lower().rstrip() for x in line]
-    if line[9] == 'australia':
-        print(line)
-    # state_of_grant = line[8]
+    print(line)
+    # if line[9] == 'australia':
+    #     print(line)
+    # # state_of_grant = line[8]
 
 #     grant_state_dict[state_of_grant] = grant_state_dict.get(state_of_grant, 0) + 1
 #
