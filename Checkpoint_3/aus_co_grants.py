@@ -12,25 +12,29 @@ def open_file():
         quit()
 
 
-# Open and read file
-ifile = open_file()
+def sort_values(dictionary):
+    t = list()
+    for key, value in dictionary.items():
+        t.append((value, key))
+    t.sort(reverse=True)
+    for value, key in t:
+        print(key, value)
 
-reader = csv.reader(ifile)
+
+# Open and read file
+file = open_file()
+reader = csv.reader(file)
 
 # Create a dictionary to store results
-grant_state_dict = dict()
+grantState = dict()
 
 # Loop through each line and calculate if the grant was given in Australia.
 for line in reader:
     # List comprehension is awesome!
-    line = [x.lower().rstrip() for x in line]
-    print(line)
-    # if line[9] == 'australia':
-    #     print(line)
-    # # state_of_grant = line[8]
+    line = [x.lower().rstrip() for x in line if line[8]]
+    if line[8] == 'australia':
+        state_of_grant = line[7]
+        grantState[state_of_grant] = grantState.get(state_of_grant, 0) + 1
 
-#     grant_state_dict[state_of_grant] = grant_state_dict.get(state_of_grant, 0) + 1
-#
-#
-# for key in grant_state_dict:
-#     print(key, grant_state_dict[key])
+# Construct a list to sort the grants
+sort_values(grantState)
